@@ -8,14 +8,13 @@
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true, // error handled: /node_modules/@types/react/index"' can only be default-imported using the 'allowSyntheticDefaultImports' flag
-    "esModuleInterop" : true, // import _ from 'lodash'; 문법을 유지하기 위함(https://webpack.kr/guides/typescript/)
+    "esModuleInterop": true, // import _ from 'lodash'; 문법을 유지하기 위함(https://webpack.kr/guides/typescript/)
     "sourceMap": true, // 배포용으로 빌드한 파일과 원본 파일을 서로 연결시켜주는 기능, 압축하여 배포한 파일에서 에러가 났다면? 배포용 파일의 특정 부분이 원본 소스의 어떤 부분인지 확인 가능하도록 하는 옵션
-    "includes": ["src"],
     "baseUrl": "./src",
     "paths": {
       "~/*": ["./*"],
       "@containers/*": ["containers/*"],
-      "@components/*": ["components/*"],
-    },
+      "@components/*": ["components/*"]
+    }
   }
 }

@@ -1,18 +1,18 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: './src/index.tsx'
+    main: './src/index.tsx',
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './build') 
+    path: path.resolve(__dirname, './build'),
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
-    modules: ['src', 'node_modules'] // Assuming that your files are inside the src dir
+    modules: ['src', 'node_modules'], // Assuming that your files are inside the src dir
   },
   devtool: 'eval-cheap-source-map',
   module: {
@@ -36,11 +36,11 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-        }
+        },
       },
     ],
   },
-// webpack-dev-server options
+  // webpack-dev-server options
   devServer: {
     hot: true,
     port: 3000,
@@ -53,4 +53,4 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
-};
+}
