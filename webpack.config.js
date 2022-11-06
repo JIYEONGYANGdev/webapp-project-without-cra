@@ -4,19 +4,24 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './src/index.tsx'
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './build') 
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
+    modules: ['src', 'node_modules'] // Assuming that your files are inside the src dir
   },
   devtool: 'eval-cheap-source-map',
   module: {
     rules: [
       {
         test: /\.(js|jsx|ts|tsx)$/,
-        exclude: '/node_modules/',
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+
       },
       {
         test: /\.css$/,
