@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack-build": "webpack --progress --mode production",
-    "webpack-dev-server": "webpack-dev-server --progress --mode development",
+    "build": "next build",
     "dev": "next dev -p ${PORT-3030}",
-    "next-build": "next build",
     "start": "npm run next start -p ${PORT-3030}"
   },
   "keywords": [],
