@@ -11,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="/assets/busiman_logo.png" sizes="32x32" />
+          <link rel="icon" href="/busiman_logo.png" sizes="32x32" />
         </Head>
 
         <body>
