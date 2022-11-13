@@ -2,9 +2,9 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "esnext",
     "target": "es5",
-    "jsx": "react",
+    "jsx": "preserve",
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true, // error handled: /node_modules/@types/react/index"' can only be default-imported using the 'allowSyntheticDefaultImports' flag
@@ -12,9 +12,35 @@
     "sourceMap": true, // 배포용으로 빌드한 파일과 원본 파일을 서로 연결시켜주는 기능, 압축하여 배포한 파일에서 에러가 났다면? 배포용 파일의 특정 부분이 원본 소스의 어떤 부분인지 확인 가능하도록 하는 옵션
     "baseUrl": "./src",
     "paths": {
-      "~/*": ["./*"],
-      "@containers/*": ["containers/*"],
-      "@components/*": ["components/*"]
-    }
-  }
+      "~/*": [
+        "./*"
+      ],
+      "@containers/*": [
+        "containers/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
