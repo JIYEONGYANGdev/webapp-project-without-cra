@@ -6,7 +6,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev -p ${PORT-3030}",
-    "start": "npm run next start -p ${PORT-3030}"
+    "start": "npm run next start -p ${PORT-3030}",
+    "vercel-deploy": "next build && next export"
   },
   "keywords": [],
   "author": "",
