@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+@font-face {
+  font-family: "HSWinterNoonkott2_0";
+  src: url("../src/assets/fonts/HSGyeoulNoonkott2.0-Regular.ttf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}

@@ -12,6 +12,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="icon" href="/busiman_logo.png" sizes="32x32" />
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" />
         </Head>
 
         <body>
