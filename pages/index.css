@@ -2,6 +2,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif !important;
+  width: 100vw;
 }
 
 @font-face {
