@@ -17,7 +17,7 @@ const Index = () => (
     </Head>
 
     <>
-      <div>hi</div>
+      <body id="_app">hi</body>
     </>
   </>
 )
