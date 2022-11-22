@@ -1,12 +1,22 @@
-import React from 'react'
-import Header from '~/components/Header'
+import React, { useMemo } from 'react'
+import { RESPONSIVE_MODE, useResponsiveMode } from '~/utils/useResponsiveMode'
+import { HeaderPC, HeaderMobile } from '~/components/Header'
 import NavBar from '~/components/NavBar'
 
 const Mypage = () => {
+  const responsiveMode = useResponsiveMode()
+  const isMobile = useMemo(() => responsiveMode <= RESPONSIVE_MODE.TABLET_MINI, [responsiveMode])
+
   return (
     <>
-      <Header />
-      <NavBar />
+      {isMobile ? (
+        <HeaderMobile />
+      ) : (
+        <>
+          <HeaderPC />
+          <NavBar />
+        </>
+      )}
     </>
   )
 }

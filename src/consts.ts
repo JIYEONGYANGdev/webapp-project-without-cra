@@ -12,7 +12,7 @@ export const NAVBAR_MENU_BUTTONS: { [key: string]: NavBarButtonProps } = {
     onClick: () => console.log('service-info'),
   },
   NAV_FILM_FEST_INFO: {
-    key: 'main_nav_service-info',
+    key: 'main_nav_film-fest-info',
     title: '영화제 구경하기',
     onClick: () => console.log('film-fest-info'),
   },
