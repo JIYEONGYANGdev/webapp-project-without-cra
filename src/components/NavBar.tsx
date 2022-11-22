@@ -1,27 +1,17 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import styled from 'styled-components'
+import { NAVBAR_MENU_BUTTONS } from '~/consts'
 
 const NavBar = () => {
+  const navMenuKeys = useMemo(() => Object.keys(NAVBAR_MENU_BUTTONS), [NAVBAR_MENU_BUTTONS])
+
   return (
     <Wrapper>
-      <Button key={'main_nav_service-info'} onClick={() => console.log('서비스 소개')}>
-        서비스 소개
-      </Button>
-      <Button key={'main_nav_service-info'} onClick={() => console.log('영화제 구경하기')}>
-        영화제 구경하기
-      </Button>
-      <Button key={'main_nav_service-info'} onClick={() => console.log('이벤트')}>
-        이벤트
-      </Button>
-      <Button key={'main_nav_service-info'} onClick={() => console.log('대화연광장')}>
-        대화연광장
-      </Button>
-      <Button key={'main_nav_service-info'} onClick={() => console.log('궁금한점')}>
-        궁금한점
-      </Button>
-      <Button key={'main_nav_service-info'} onClick={() => console.log('사업문의')}>
-        사업문의
-      </Button>
+      {navMenuKeys.map((menu) => (
+        <Button key={NAVBAR_MENU_BUTTONS[menu].key} onClick={NAVBAR_MENU_BUTTONS[menu].onClick}>
+          {NAVBAR_MENU_BUTTONS[menu].title}
+        </Button>
+      ))}
     </Wrapper>
   )
 }
