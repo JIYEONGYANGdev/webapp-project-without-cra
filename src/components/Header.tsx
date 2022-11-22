@@ -21,13 +21,14 @@ const Wrapper = styled.div`
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   padding: 10px 20px;
   background-color: #fff4ce;
 
   @media screen and (min-width: 769px) {
     max-height: 92px;
-    padding: 16px 58px;
+    padding: 16px 58px 8px 58px;
   }
 `
 
@@ -60,7 +61,7 @@ const Title = styled.div`
 const IconWrppaer = styled.div`
   i {
     font-size: 20px;
-    padding: 10px;
+    padding: 10px 6px;
 
     :last-of-type {
       padding-right: 0;
